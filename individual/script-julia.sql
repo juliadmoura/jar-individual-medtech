@@ -105,11 +105,11 @@ CREATE TABLE leituraFerramenta(
 );
 
 CREATE TABLE relatorio(
-	idRelatorio int primary key AUTO_INCREMENT,
-	dataRelatorio datetime,
-	descricao VARCHAR(500),
-    fkComputador int not NULL,
-	CONSTRAINT fkComputadorRelatorio FOREIGN KEY (fkComputador) REFERENCES computador(idComputador)
+    idRelatorio int PRIMARY KEY IDENTITY,
+    dataRelatorio datetime,
+    descricao VARCHAR(500),
+    fkComputador int NOT NULL,
+    CONSTRAINT fkComputadorRelatorio FOREIGN KEY (fkComputador) REFERENCES computador(idComputador)
 );
 
 INSERT INTO endereco (cep, rua, numero, complemento, uf) VALUES
